@@ -1,5 +1,6 @@
 "use client";
-import { FolderOpen } from "lucide-react";
+import Header from "@/app/components/Header";
+import { User } from "lucide-react";
 import { motion } from "motion/react";
 
 export default function AboutPage({ html }: { html: string }) {
@@ -13,15 +14,10 @@ export default function AboutPage({ html }: { html: string }) {
         className="p-40 absolute -z-10 rounded-full top-10 left-1/3 -translate-x-1/2 shadow-[0_0_200px_0] shadow-primary bg-primary/40 opacity-30"
       ></motion.div>
       <div className="text-center space-y-4 w-full">
-        <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="group inline-flex items-center bg-white/5 backdrop-blur-xl gap-2 py-2 px-5 rounded-full border border-primary/20 text-sm transition-all ease-in-out duration-300"
-        >
-          <FolderOpen size={20} className="text-emerald" /> ~/about
-        </motion.div>
+        <Header
+          name="~/about"
+          icon={<User size={20} className="text-emerald" />}
+        />
         <motion.h1
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
