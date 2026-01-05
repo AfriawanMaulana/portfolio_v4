@@ -146,7 +146,7 @@ export default function LandingPage() {
                 <ArrowRight className="group-hover:translate-x-1 transition-all ease-in-out duration-300" />
               </Link>
               <Link
-                href={"/projects"}
+                href={"/contact"}
                 className="inline-flex items-center justify-center gap-3 py-4 w-full md:w-60 rounded-xl border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-black transition-all ease-in-out duration-300"
               >
                 <Mail />
@@ -338,42 +338,57 @@ export default function LandingPage() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-3 gap-4 my-6"
         >
-          <SpotlightCard
-            className="custom-spotlight-card space-y-2"
-            spotlightColor="rgba(3, 157, 89, 0.71)"
+          <Link
+            href="/projects"
+            className="hover:-translate-y-1 transition-all ease-in-out duration-300"
           >
-            <div className="h-12 w-12 bg-emerald/20 text-emerald rounded-xl flex items-center justify-center">
-              <Folder />
-            </div>
-            <div>
-              <h1 className="text-xl font-mono">projects/</h1>
-              <p className="text-white/50 text-xs">Explore my work</p>
-            </div>
-          </SpotlightCard>
-          <SpotlightCard
-            className="custom-spotlight-card space-y-2"
-            spotlightColor="rgba(0, 27, 155, 0.43)"
+            <SpotlightCard
+              className="custom-spotlight-card space-y-2"
+              spotlightColor="rgba(3, 157, 89, 0.71)"
+            >
+              <div className="h-12 w-12 bg-emerald/20 text-emerald rounded-xl flex items-center justify-center">
+                <Folder />
+              </div>
+              <div>
+                <h1 className="text-xl font-mono">projects/</h1>
+                <p className="text-white/50 text-xs">Explore my work</p>
+              </div>
+            </SpotlightCard>
+          </Link>
+          <Link
+            href="/resume"
+            className="hover:-translate-y-1 transition-all ease-in-out duration-300"
           >
-            <div className="h-12 w-12 bg-blue-900/20 text-blue-500 rounded-xl flex items-center justify-center">
-              <FileSliders />
-            </div>
-            <div>
-              <h1 className="text-xl font-mono">resume.pdf</h1>
-              <p className="text-white/50 text-xs">Download my CV</p>
-            </div>
-          </SpotlightCard>
-          <SpotlightCard
-            className="custom-spotlight-card space-y-2"
-            spotlightColor="rgba(157, 3, 139, 0.71)"
+            <SpotlightCard
+              className="custom-spotlight-card space-y-2"
+              spotlightColor="rgba(0, 27, 155, 0.43)"
+            >
+              <div className="h-12 w-12 bg-blue-900/20 text-blue-500 rounded-xl flex items-center justify-center">
+                <FileSliders />
+              </div>
+              <div>
+                <h1 className="text-xl font-mono">resume.pdf</h1>
+                <p className="text-white/50 text-xs">Download my CV</p>
+              </div>
+            </SpotlightCard>
+          </Link>
+          <Link
+            href="/contact"
+            className="hover:-translate-y-1 transition-all ease-in-out duration-300"
           >
-            <div className="h-12 w-12 bg-pink-900/20 text-pink-500 rounded-xl flex items-center justify-center">
-              <Mail />
-            </div>
-            <div>
-              <h1 className="text-xl font-mono">contact</h1>
-              <p className="text-white/50 text-xs">Let&apos;s connect</p>
-            </div>
-          </SpotlightCard>
+            <SpotlightCard
+              className="custom-spotlight-card space-y-2"
+              spotlightColor="rgba(157, 3, 139, 0.71)"
+            >
+              <div className="h-12 w-12 bg-pink-900/20 text-pink-500 rounded-xl flex items-center justify-center">
+                <Mail />
+              </div>
+              <div>
+                <h1 className="text-xl font-mono">contact</h1>
+                <p className="text-white/50 text-xs">Let&apos;s connect</p>
+              </div>
+            </SpotlightCard>
+          </Link>
         </motion.div>
       </div>
     </GoogleReCaptchaProvider>
