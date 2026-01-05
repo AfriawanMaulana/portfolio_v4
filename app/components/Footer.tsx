@@ -26,7 +26,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="flex flex-col w-full h-auto space-y-2 py-6 items-center justify-center border-t border-white/20">
+    <footer className="flex flex-col w-full h-auto space-y-2 p-6 items-center justify-center border-t border-white/20">
       <Link href={"/"} className="flex items-center gap-2">
         <TerminalIcon
           color="black"
@@ -49,6 +49,27 @@ export default function Footer() {
       </div>
       <p className="inline-flex gap-2 items-center text-white/40 text-sm">
         <Copyright size={15} /> {year} Afriawan Maulana
+      </p>
+      <p className="text-xs text-center text-muted-foreground mt-2">
+        This site is protected by reCAPTCHA and the Google
+        <a
+          href="https://policies.google.com/privacy"
+          target="_blank"
+          className="text-blue-500/50"
+        >
+          {" "}
+          Privacy Policy
+        </a>{" "}
+        and
+        <a
+          href="https://policies.google.com/terms"
+          target="_blank"
+          className="text-blue-500/50"
+        >
+          {" "}
+          Terms of Service
+        </a>{" "}
+        apply.
       </p>
     </footer>
   );

@@ -19,6 +19,15 @@ export const metadata: Metadata = {
   title: "Afriawan Maulana - Portfolio",
   description:
     "Hi! I'm Afriawan Maulana, an Informatics student at Wijaya Kusuma University of Surabaya, driven by a passion for web development and a strong focus on building modern, scalable, and user-friendly applications.",
+  keywords: [
+    "afriawan",
+    "afriawan maulana",
+    "afriawan maulana portfolio",
+    "afriawan maulana web developer",
+    "afriawan maulana fullstack developer",
+    "web developer surabaya",
+    "terry",
+  ],
 };
 
 export default function RootLayout({
@@ -28,6 +37,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Afriawan Maulana",
+              url: "https://afriawan.my.id",
+              sameAs: [
+                "https://github.com/AfriawanMaulana",
+                "https://www.linkedin.com/in/afriawan-maulana-661684303",
+                "https://www.instagram.com/afriawanmaulana",
+              ],
+            }),
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
