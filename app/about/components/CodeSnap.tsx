@@ -5,8 +5,8 @@ export default async function CodeSnap() {
   const code = `
 const developer = {
   name: "Afriawan Maulana",
-  role: "Software Developer",
-  focus: ["Web Development", "Software Engineering"],
+  role: "Fullstack Developer",
+  focus: ["Web Development", "Software Development"],
   dream: "Becoming a skilled software developer"
 };
 `;
